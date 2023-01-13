@@ -1,22 +1,22 @@
 # Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+title: Yen-Ting Lin
+position: Ph.D. Candidate
+affiliation: National Taiwan University
+email: ytl (at) ieee.org
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: yenting lin nlp ntu
+description: Discover the latest research and publications in NLP on Yenting academic website
+canonical: https://yentingl.com
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
+google_scholar: https://scholar.google.com/citations?user=UWOV0tYAAAAJ&hl=en
+cv_link: https://drive.google.com/file/d/13XnPPsp8tSTZHb-iLqkvEY_CfldiniCt/view?usp=share_link
+github_link: https://github.com/adamlin120
+linkedin: https://www.linkedin.com/in/yen-ting-lin-416732b3/
+twitter: https://twitter.com/yentinglin56
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
