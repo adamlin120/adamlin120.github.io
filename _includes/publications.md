@@ -5,17 +5,8 @@
 
 <li>
 <div class="pub-row">
-
-[//]: # (  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">)
-
-[//]: # (    <img src="assets/img/teaser_example.png" class="teaser img-fluid z-depth-1">)
-
-[//]: # (    <abbr class="badge">CVPR</abbr>)
-
-[//]: # (  </div>)
-
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
-    <div class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/">Mnemonics Training: Multi-Class Incremental Learning without Forgetting</a></div>
+    <div class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
     <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Dilek Hakkani-Tur</div>
     <div class="periodical"><em>Special Interest Group on Discourse and Dialogue <strong>(SIGDial)</strong>, 2022.</em></div>
     <div class="links">
@@ -24,7 +15,11 @@
       <a href="https://dblp.uni-trier.de/rec/conf/sigdial/LinPKH22.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
       <strong><i style="color:#e74d3c">Oral Presentation</i></strong>
     </div>
-  </div>
+</div>
+</li>
+<li>
+<div class="pub-row">
+    </div> 
     <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
         <div class="title"><a href="https://aclanthology.org/2022.acl-long.425/">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
         <div class="author">Ssu Chiu, Maolin Li, <strong>Yen-Ting Lin</strong>, Yun-Nung Chen</div>
