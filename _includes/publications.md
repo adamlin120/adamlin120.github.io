@@ -15,11 +15,11 @@
       <a href="https://dblp.uni-trier.de/rec/conf/sigdial/LinPKH22.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
       <strong><i style="color:#e74d3c">Oral Presentation</i></strong>
     </div>
+  </div>
 </div>
 </li>
 <li>
 <div class="pub-row">
-    </div> 
     <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
         <div class="title"><a href="https://aclanthology.org/2022.acl-long.425/">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
         <div class="author">Ssu Chiu, Maolin Li, <strong>Yen-Ting Lin</strong>, Yun-Nung Chen</div>
@@ -29,7 +29,7 @@
           <a href="https://github.com/miulab/salesbot" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
           <a href="https://dblp.uni-trier.de/rec/conf/acl/ChiuLLC22.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
         </div>
-      </div>
+    </div>
 </div>
 </li>
   
