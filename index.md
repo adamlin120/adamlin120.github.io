@@ -4,19 +4,23 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I'm a Ph.D. candidate at National Taiwan University, advised by Professor <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a> in the <a href="https://www.csie.ntu.edu.tw/~miulab/">Miulab</a>.
+I have been fortunate to gain practical experience through various internships, including at IBM Research in the summer of 2020, MediaTek Research in the summer of 2020, and Amazon Alexa AI in the summers of 2021 and 2022. 
 
-## Research Interests
+My research focus is on Natural Language Processing and Dialogue Systems. 
+For a more in-depth understanding of my qualifications and experience, please refer to my CV.
 
-- **Natural Language Processing:** large language model, data augmentation
-- **Conversational AI:** task-oriented dialogue, dialogue state tracking, response generation
+[//]: # (## Research Interests)
+
+[//]: # ()
+[//]: # (- **Natural Language Processing:** large language model, data augmentation)
+
+[//]: # (- **Conversational AI:** task-oriented dialogue, dialogue state tracking, response generation)
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Sept. 2022]** Our paper about data augmentation for response generation is accepted to SIGDIAL 2022.
+- **[May. 2022]** Our paper about fusing task-oriented conversations with chit-chat is accepted to ACL 2022.
 
 {% include_relative _includes/publications.md %}
 
