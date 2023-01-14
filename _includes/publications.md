@@ -25,7 +25,7 @@
         <div class="author">Ssu Chiu, Maolin Li, <strong>Yen-Ting Lin</strong>, Yun-Nung Chen</div>
         <div class="periodical"><em>Association for Computational Linguistics <strong>(ACL)</strong>, 2022.</em></div>
         <div class="links">
-          <a href="https://aclanthology.org/2022.acl-long.425/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+          <a href="https://aclanthology.org/2022.acl-long.425/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
           <a href="https://github.com/miulab/salesbot" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
           <a href="https://dblp.uni-trier.de/rec/conf/acl/ChiuLLC22.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
         </div>
