@@ -4,6 +4,7 @@
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://aaai.org/Conferences/AAAI-23/"><autocolor>AAAI Conference on Artificial Intelligence (AAAI) 2023</autocolor></a></li>
+  <li><a href="https://2023.ieeeicassp.org"><autocolor>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2023</autocolor></a></li>
 </ul>
 
 [//]: # (<h4 style="margin:0 10px 0;">Journal Reviewers</h4>)
