@@ -19,6 +19,7 @@ For a more in-depth understanding of my qualifications and experience, please re
 
 ## News
 
+- **[Jan. 2023]** Our paper about data augmentation for intent detcetion is accepted to EACL 2023.
 - **[Sept. 2022]** Our paper about data augmentation for response generation is accepted to SIGDIAL 2022.
 - **[May. 2022]** Our paper about fusing task-oriented conversations with chit-chat is accepted to ACL 2022.
 

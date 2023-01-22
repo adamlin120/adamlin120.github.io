@@ -6,6 +6,15 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
+    <div class="title"><a href="https://yentingl.com">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
+    <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Sungjin Lee, Devamanyu Hazarika, Mahdi Namazifar, Di Jin, Yang Liu and Dilek Hakkani-Tur</div>
+    <div class="periodical"><em>The 17th Conference of the European Chapter of the Association for Computational Linguistics <strong>(EACL)</strong>, 2023.</em></div>
+  </div>
+</div>
+</li>
+<li>
+<div class="pub-row">
+  <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
     <div class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
     <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Dilek Hakkani-Tur</div>
     <div class="periodical"><em>Special Interest Group on Discourse and Dialogue <strong>(SIGDial)</strong>, 2022.</em></div>
