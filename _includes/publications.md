@@ -10,7 +10,8 @@
     <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Sungjin Lee, Devamanyu Hazarika, Mahdi Namazifar, Di Jin, Yang Liu and Dilek Hakkani-Tur</div>
     <div class="periodical"><em>The 17th Conference of the European Chapter of the Association for Computational Linguistics <strong>(EACL)</strong>, 2023.</em></div>
     <div class="links">
-      <a href="https://drive.google.com/file/d/1O2tRRzYd8hwAT9H04TXInmRuOK5kbA9h/view?usp=share_link" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
+      <a href="https://arxiv.org/abs/2302.05096" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
+      <a href="https://www.semanticscholar.org/paper/Selective-In-Context-Data-Augmentation-for-Intent-Lin-Papangelis/027ec9a2aaa81b01d190e8607b2250779e5834dd" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
   </div>
 </div>
