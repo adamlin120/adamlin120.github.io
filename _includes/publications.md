@@ -11,7 +11,7 @@
     <div class="periodical"><em>The 17th Conference of the European Chapter of the Association for Computational Linguistics <strong>(EACL)</strong>, 2023.</em></div>
     <div class="links">
       <a href="https://arxiv.org/abs/2302.05096" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
-      <a href="https://www.semanticscholar.org/paper/Selective-In-Context-Data-Augmentation-for-Intent-Lin-Papangelis/027ec9a2aaa81b01d190e8607b2250779e5834dd" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      <a href="https://dblp.uni-trier.de/rec/journals/corr/abs-2302-05096.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
   </div>
 </div>
