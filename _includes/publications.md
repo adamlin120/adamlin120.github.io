@@ -12,6 +12,8 @@
     <div class="links">
       <a href="https://arxiv.org/pdf/2302.05096.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
       <a href="https://ytlin.s3.ap-northeast-1.amazonaws.com/data/icda_poster.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Poster</a>
+      <a href="https://ytlin.s3-ap-northeast-1.amazonaws.com/data/icda_slides.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Slides</a>
+      <a href="https://youtu.be/klN--Y7pttU" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Video</a>
       <a href="https://dblp.uni-trier.de/rec/journals/corr/abs-2302-05096.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
   </div>
