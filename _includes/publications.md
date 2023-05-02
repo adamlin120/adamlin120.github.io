@@ -6,7 +6,7 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
-    <div class="title"><a href="https://arxiv.org/abs/2302.05096">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
+    <div class="title"><a href="https://aclanthology.org/2023.eacl-main.107/">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
     <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Sungjin Lee, Devamanyu Hazarika, Mahdi Namazifar, Di Jin, Yang Liu and Dilek Hakkani-Tur</div>
     <div class="periodical"><em>The 17th Conference of the European Chapter of the Association for Computational Linguistics <strong>(EACL)</strong>, 2023.</em></div>
     <div class="links">
