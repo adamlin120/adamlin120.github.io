@@ -6,6 +6,18 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
+    <div class="title"><a href="https://github.com/adamlin120/adamlin120.github.io/blob/main/_includes/LLM-Eval%20-%20Unified%20Multi-Dimensional%20Automatic%20Evaluation%20for%20Open-Domain%20Conversations%20with%20Large%20Language%20Models.pdf">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models</a></div>
+    <div class="author"><strong>Yen Ting Lin</strong>, Yun-Nung Chen</div>
+    <div class="periodical"><em>5th Workshop on NLP for ConvAI <strong>(NLP4ConvAI)</strong>, 2023.</em></div>
+    <div class="links">
+      <a href="[https://arxiv.org/pdf/2302.05096.pdf](https://github.com/adamlin120/adamlin120.github.io/blob/main/_includes/LLM-Eval%20-%20Unified%20Multi-Dimensional%20Automatic%20Evaluation%20for%20Open-Domain%20Conversations%20with%20Large%20Language%20Models.pdf)" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
+    </div>
+  </div>
+</div>
+</li>  
+<li>
+<div class="pub-row">
+  <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
     <div class="title"><a href="https://aclanthology.org/2023.eacl-main.107/">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
     <div class="author"><strong>Yen Ting Lin</strong>, Alexandros Papangelis, Seokhwan Kim, Sungjin Lee, Devamanyu Hazarika, Mahdi Namazifar, Di Jin, Yang Liu and Dilek Hakkani-Tur</div>
     <div class="periodical"><em>The 17th Conference of the European Chapter of the Association for Computational Linguistics <strong>(EACL)</strong>, 2023.</em></div>
