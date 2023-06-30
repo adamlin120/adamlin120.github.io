@@ -10,7 +10,7 @@
     <div class="author"><strong>Yen Ting Lin</strong>, Yun-Nung Chen</div>
     <div class="periodical"><em>5th Workshop on NLP for ConvAI <strong>(NLP4ConvAI)</strong>, 2023.</em></div>
     <div class="links">
-      <a href="https://ytlin.s3.ap-northeast-1.amazonaws.com/data/icda_poster.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Poster</a>
+      <a href="https://arxiv.org/pdf/2305.13711.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
       <a href="https://github.com/MiuLab/LLM-Eval/tree/main" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
       <a href="https://dblp.org/rec/journals/corr/abs-2305-13711.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
