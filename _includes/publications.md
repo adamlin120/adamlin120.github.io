@@ -6,13 +6,13 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
-    <div class="title"><a href="http://arxiv.org/abs/2305.13711">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models</a></div>
+    <div class="title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models</a></div>
     <div class="author"><strong>Yen Ting Lin</strong>, Yun-Nung Chen</div>
     <div class="periodical"><em>5th Workshop on NLP for ConvAI <strong>(NLP4ConvAI)</strong>, 2023.</em></div>
     <div class="links">
       <a href="https://arxiv.org/pdf/2305.13711.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
       <a href="https://github.com/MiuLab/LLM-Eval/tree/main" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      <a href="https://dblp.org/rec/journals/corr/abs-2305-13711.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      <a href="https://aclanthology.org/2023.nlp4convai-1.5.bib" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
   </div>
 </div>
