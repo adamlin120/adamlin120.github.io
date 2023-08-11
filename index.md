@@ -18,7 +18,7 @@ For a more in-depth understanding of my qualifications and experience, please re
 [//]: # (- **Conversational AI:** task-oriented dialogue, dialogue state tracking, response generation)
 
 ## News
-- **[Aug. 2023]** We release <a href="https://github.com/adamlin120/Taiwan-LLaMa/tree/main">Taiwan-LLaMa</a>, the first Traditional Chinese Large Language Models.
+- **[Aug. 2023]** We release <a href="https://github.com/MiuLab/Taiwan-LLaMa">Taiwan-LLaMa</a>, the first Traditional Chinese Large Language Models.
 - **[May. 2023]** Our paper about LLM for dialogue evaluation is accepted to NLP4ConvAI 2023.
 - **[Jan. 2023]** Our paper about data augmentation for intent detcetion is accepted to EACL 2023.
 - **[Sept. 2022]** Our paper about data augmentation for response generation is accepted to SIGDIAL 2022.
