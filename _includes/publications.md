@@ -13,7 +13,7 @@
       <a href="https://arxiv.org/pdf/2311.17487.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
       <a href="https://twllm.com" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Demo</a>
       <a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Model</a>
-      <a href="https://arxiv.org/abs/2311.17487" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      <a href="https://dblp.org/rec/journals/corr/abs-2311-17487.html?view=bibtex" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
     </div>
   </div>
 </div>
