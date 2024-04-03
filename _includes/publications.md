@@ -3,6 +3,8 @@
 <div class="publications">
 <ol class="bibliography">
 
+ <li> <div class="pub-row"> <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;"> <div class="title"><a href="https://arxiv.org/abs/2403.20180">Measuring Taiwanese Mandarin Language Understanding</a></div> <div class="author">Po-Heng Chen, Sijia Cheng, Wei-Lin Chen, <strong>Yen-Ting Lin</strong>, Yun-Nung Chen</div> <div class="periodical"><em>Preprint</em></div> <div class="links"> <a href="https://arxiv.org/pdf/2403.20180.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a> <a href="https://www.semanticscholar.org/paper/Measuring-Taiwanese-Mandarin-Language-Understanding-Chen-Cheng/367c806e8712c0001579e2d564481a3311693e20" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Cite</a> </div> </div> </div> </li>
+
 <li>
 <div class="pub-row">
   <div class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
