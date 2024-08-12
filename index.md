@@ -5,10 +5,12 @@ layout: homepage
 ## About Me
 
 I'm a Ph.D. candidate at National Taiwan University, advised by Professor <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a> in the <a href="https://www.csie.ntu.edu.tw/~miulab/">Miulab</a>.
-I have been fortunate to gain practical experience through various internships, including at IBM Research in the summer of 2020, MediaTek Research in the summer of 2020, and Amazon Alexa AI in the summers of 2021 and 2022. 
+I have been fortunate to gain practical experience through various internships, including at Meta GenAI in summer 2024, Nvidia Research in spring 2024, Amazon Alexa AI in the summers of 2021, 2022, and 2023, MediaTek Research in the summer of 2019, and IBM Research in the summer of 2020.
 
-My research focus is on Natural Language Processing and Language Models. 
+My research focus is on Language Models and NLP. 
 For a more in-depth understanding of my qualifications and experience, please refer to my CV.
+
+<strong>I am actively seeking industry research scientist / engineer positions starting in 2025.</strong>
 
 [//]: # (## Research Interests)
 
