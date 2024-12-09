@@ -10,7 +10,7 @@ I have been fortunate to gain practical experience through various internships, 
 My research focus is on Language Models and NLP. 
 For a more in-depth understanding of my qualifications and experience, please refer to my CV.
 
-<strong>I am actively seeking industry research scientist / engineer positions starting in 2025.</strong>
+<strong style="color: red;">I am actively seeking industry research scientist / engineer positions starting in 2025.</strong>
 
 [//]: # (## Research Interests)
 
