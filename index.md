@@ -20,6 +20,9 @@ My research focuses on reasoning and large language models (LLMs). For more deta
 [//]: # (- **Conversational AI:** task-oriented dialogue, dialogue state tracking, response generation)
 
 ## News
+- **[Feb. 2025]** Released an open-weight reasoning model, [**Mistral-Small-Reasoning**](https://huggingface.co/yentinglin/Mistral-Small-24B-Instruct-2501-reasoning)
+- **[Jan. 2025]** My work at Meta GenAI: [*Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback*](https://arxiv.org/pdf/2501.10799) has been published.
+- **[Jan. 2025]** I have successfully completed my Ph.D. at National Taiwan University.
 - **[Aug. 2024]** <a href="https://build.nvidia.com/yentinglin/llama-3-taiwan-70b-instruct">Yentinglin/llama-3-taiwan-70b-instruct</a> is now live on NVIDIA's NIM platform and featured in <a href="https://nvda.ws/3X1Ndj5">NVIDIA sovereign AI blog post</a>.
 - **[Jun. 2024]** Our paper on TMLU (Traditional Mandarin Language Understanding) has been accepted to COLM 2024.
 - **[Aug. 2023]** We release <a href="https://github.com/MiuLab/Taiwan-LLaMa">Taiwan-LLaMa</a>, the first Traditional Chinese Large Language Models.
