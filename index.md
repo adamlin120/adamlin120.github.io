@@ -4,13 +4,13 @@ layout: homepage
 
 ## About Me
 
-I'm a Ph.D. candidate at National Taiwan University, advised by Professor <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a> in the <a href="https://www.csie.ntu.edu.tw/~miulab/">Miulab</a>.
-I have been fortunate to gain practical experience through various internships, including at Meta GenAI in summer 2024, Nvidia Research in spring 2024, Amazon Alexa AI in the summers of 2021, 2022, and 2023, MediaTek Research in the summer of 2019, and IBM Research in the summer of 2020.
+I completed my Ph.D. at National Taiwan University in January 2025, advised by Professor Yun-Nung (Vivian) Chen in the Miulab.
 
-My research focus is on Language Models and NLP. 
-For a more in-depth understanding of my qualifications and experience, please refer to my CV.
+I have gained practical experience through research internships at Meta GenAI (summer 2024), Nvidia Research (spring 2024), Amazon Alexa AI (summers of 2021, 2022, and 2023), MediaTek Research (summer 2019), and IBM Research (summer 2020).
 
-<strong style="color: red;">I am actively seeking industry research scientist / engineer positions starting in 2025.</strong>
+My research focuses on reasoning and large language models (LLMs). For more details on my qualifications and experience, please refer to my CV.
+
+<strong style="color: red;">I am actively seeking research scientist positions starting in 2025.</strong>
 
 [//]: # (## Research Interests)
 
