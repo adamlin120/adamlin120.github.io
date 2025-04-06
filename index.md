@@ -10,8 +10,6 @@ I have gained practical experience through research internships at Meta GenAI (s
 
 My research focuses on reasoning and large language models (LLMs). For more details on my qualifications and experience, please refer to my CV.
 
-<strong style="color: red;">I am actively seeking research scientist positions starting in 2025.</strong>
-
 [//]: # (## Research Interests)
 
 [//]: # ()
