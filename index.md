@@ -4,11 +4,11 @@ layout: homepage
 
 ## About Me
 
-I completed my Ph.D. at National Taiwan University in January 2025, advised by Professor Yun-Nung (Vivian) Chen in the Miulab.
+I will be joining Google DeepMind as a Research Scientist. I completed my Ph.D. at National Taiwan University in January 2025, advised by Professor Yun-Nung (Vivian) Chen in the Miulab.
 
-I have gained practical experience through research internships at Meta GenAI (summer 2024), Nvidia Research (spring 2024), Amazon Alexa AI (summers of 2021, 2022, and 2023), MediaTek Research (summer 2019), and IBM Research (summer 2020).
+Research internships: Meta GenAI, Nvidia Research, Amazon Alexa AI, MediaTek Research, IBM Research.
 
-My research focuses on reasoning and large language models (LLMs). For more details on my qualifications and experience, please refer to my resume.
+My research focuses on reasoning and large language models (LLMs). For more details, please refer to my resume.
 
 [//]: # (## Research Interests)
 
