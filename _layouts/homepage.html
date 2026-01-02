@@ -1,247 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yen-Ting Lin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <title>Yenting Lin</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* ---- Global Typography & Colors ---- */
+    html {
+      font-size: 16px;
     }
 
     body {
-      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-      background-color: #f4f4f3;
-      color: #000;
-      font-size: 18px;
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", Times, serif;
+      background-color: #ffffff;
+      color: #000000;
       line-height: 1.5;
     }
 
-    .wrapper {
-      max-width: 760px;
+    /* ---- Layout ---- */
+    .container {
+      max-width: 680px;
+      /* similar reading width */
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 2.5rem 1.25rem;
     }
 
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 40px;
+    /* ---- Headings ---- */
+    h1 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
     }
 
-    .name {
-      font-size: 28px;
-      font-weight: 400;
-      color: #000;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: #000;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    /* Hero */
-    .hero {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    .hero-image img {
-      width: 180px;
-      height: auto;
-    }
-
-    .hero-text p {
-      margin-bottom: 16px;
-      color: #000;
-    }
-
-    .hero-text a {
-      color: #00e;
-      text-decoration: underline;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      color: #00e;
-      text-decoration: underline;
-    }
-
-    /* Section Headers */
     h2 {
-      font-size: 28px;
-      font-weight: 400;
-      color: #000;
-      margin-bottom: 20px;
-      margin-top: 50px;
+      margin: 2rem 0 0.7rem;
+      font-size: 1.25rem;
+      font-weight: 700;
     }
 
-    /* Papers Table */
-    .papers-table {
-      width: 100%;
-      border-collapse: collapse;
+    /* ---- Links ---- */
+    a {
+      color: #0066cc;
+      /* default Safari/Chrome blue */
+      text-decoration: none;
     }
 
-    .papers-table tr {
-      vertical-align: top;
-    }
-
-    .papers-table td {
-      padding: 6px 0;
-    }
-
-    .papers-table .date {
-      width: 80px;
-      color: #000;
-      font-size: 16px;
-      padding-right: 20px;
-      white-space: nowrap;
-    }
-
-    .papers-table .title {
-      color: #000;
-    }
-
-    .papers-table .title a {
-      color: #00e;
+    a:hover {
       text-decoration: underline;
     }
 
-    .papers-table .venue {
-      color: #00e;
+    /* ---- Lists ---- */
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.3rem;
     }
 
-    .papers-table .venue a {
-      color: #00e;
-      text-decoration: underline;
+    ul li {
+      margin-bottom: 0.3rem;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero {
-        flex-direction: column;
-      }
-
-      .hero-image img {
-        width: 150px;
-      }
-
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .papers-table .date {
-        width: 70px;
-        font-size: 14px;
-      }
+    /* inline separators between anchor links */
+    .inline-links a:not(:last-child)::after {
+      content: " · ";
+      color: #000;
     }
   </style>
 </head>
-<body>
-  <div class="wrapper">
-    <!-- Header -->
-    <header>
-      <span class="name">Yen-Ting Lin</span>
-      <nav>
-        <a href="/" class="active">Home</a>
-        <a href="#papers">Papers</a>
-        <a href="#talks">Talks</a>
-      </nav>
-    </header>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-image">
-        <img src="/assets/img/avatar.png" alt="Yen-Ting Lin" />
-      </div>
-      <div class="hero-text">
-        <p>I am a Research Scientist at Google DeepMind.</p>
-        <p>At Meta, I co-developed a scalable RL pipeline that improves long-form reasoning capabilities.</p>
-        <p>I completed my Ph.D. in 2025 at <a href="https://www.ntu.edu.tw/">National Taiwan University</a>, advised by <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a>.</p>
-        <p>My research focuses on reasoning and large language models.</p>
-        <div class="social-links">
-          <a href="https://x.com/yentinglin56">Twitter</a> /
-          <a href="./resume_Yenting_Lin.pdf">CV</a> /
-          <a href="https://scholar.google.com/citations?user=UWOV0tYAAAAJ&hl=en">Google scholar</a> /
-          <a href="mailto:adamlin120@gmail.com">Email</a>
-        </div>
-      </div>
+<body>
+  <main class="container">
+    <!-- Name Header -->
+    <h1>Yenting Lin</h1>
+
+    <!-- Profile links (Google Scholar, GitHub, etc.) -->
+    <div class="inline-links">
+      <a href="https://scholar.google.com/citations?user=UWOV0tYAAAAJ&hl=en">Google Scholar</a>
+      <a href="https://github.com/adamlin120">GitHub</a>
+      <a href="https://www.linkedin.com/in/yen-ting-lin-416732b3/">LinkedIn</a>
+      <a href="./resume_Yenting_Lin.pdf">resume</a>
+      <a href="javascript:void(0)" onclick="this.innerHTML = 'adamlin120 (at) gmail.com'">Mail</a>
     </div>
 
-    <!-- Papers -->
-    <h2 id="papers">Papers</h2>
-    <table class="papers-table">
-      <tr>
-        <td class="date">2025 Jan</td>
-        <td class="title"><a href="https://arxiv.org/pdf/2501.10799">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback.</a></td>
-      </tr>
-      <tr>
-        <td class="date">2024 Jun</td>
-        <td class="title"><a href="https://arxiv.org/abs/2403.20180">Measuring Taiwanese Mandarin Language Understanding.</a> <span class="venue">(<a href="https://colmweb.org/">COLM</a>)</span></td>
-      </tr>
-      <tr>
-        <td class="date">2023 Nov</td>
-        <td class="title"><a href="https://arxiv.org/abs/2311.17487">Taiwan LLM: Bridging the Linguistic Divide with a Culturally Aligned Language Model.</a> <span class="venue">(<a href="https://twllm.com">demo</a>)</span></td>
-      </tr>
-      <tr>
-        <td class="date">2023 May</td>
-        <td class="title"><a href="http://arxiv.org/abs/2305.13711">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models.</a> <span class="venue">(<a href="https://github.com/MiuLab/LLM-Eval">code</a>)</span></td>
-      </tr>
-      <tr>
-        <td class="date">2023 Feb</td>
-        <td class="title"><a href="https://aclanthology.org/2023.eacl-main.107/">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information.</a> <span class="venue">(EACL)</span></td>
-      </tr>
-      <tr>
-        <td class="date">2022 Sep</td>
-        <td class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks.</a> <span class="venue">(SIGDIAL, Oral)</span></td>
-      </tr>
-      <tr>
-        <td class="date">2022 May</td>
-        <td class="title"><a href="https://aclanthology.org/2022.acl-long.425/">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues.</a> <span class="venue">(ACL)</span></td>
-      </tr>
-    </table>
+    <!-- Intro paragraph -->
+    <p>
+      I will be joining Google DeepMind as a Research Scientist.
+    </p>
 
-    <!-- Talks & Media -->
-    <h2 id="talks">Talks & Media</h2>
-    <table class="papers-table">
-      <tr>
-        <td class="date">2024 Aug</td>
-        <td class="title"><a href="https://build.nvidia.com/yentinglin/llama-3-taiwan-70b-instruct">Taiwan-LLM</a> featured on NVIDIA NIM platform.</td>
-      </tr>
-      <tr>
-        <td class="date">2025 Feb</td>
-        <td class="title">Released <a href="https://huggingface.co/yentinglin/Mistral-Small-24B-Instruct-2501-reasoning">Mistral-Small-Reasoning</a>, an open-weight reasoning model.</td>
-      </tr>
-    </table>
 
-  </div>
+    <p>
+      At Meta, I co-developed a scalable RL pipeline that improves long-form reasoning capabilities.
+      I completed my Ph.D. in 2025 at National Taiwan University, advised by Professor Yun-Nung (Vivian) Chen.
+    </p>
+
+    <!-- Experience -->
+    <h2>Internship Experience</h2>
+    <ul>
+      <li><strong>Meta GenAI:</strong> Enhanced reasoning with stepwise feedback and long-form reasoning</li>
+      <li><strong>NVIDIA Research:</strong> Developed error correction methods for multimodal language models</li>
+      <li><strong>Amazon Alexa AI:</strong> Built factuality evaluation agent and synthetic data techniques</li>
+    </ul>
+
+    <!-- Selected Publications -->
+    <h2>Selected Publications</h2>
+    <ul>
+      <li><em>Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</em> (<a
+          href="https://arxiv.org/pdf/2501.10799">arXiv 2025</a>)</li>
+      <li><em>Measuring Taiwanese Mandarin Language Understanding</em> (<a
+          href="https://arxiv.org/abs/2403.20180">COLM&nbsp;2024</a>)</li>
+      <li><em>LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language
+          Models</em> (<a href="https://aclanthology.org/2023.nlp4convai-1.5/">NLP4ConvAI&nbsp;2023</a>)</li>
+      <li><em>Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</em> (<a
+          href="https://aclanthology.org/2023.eacl-main.107/">EACL&nbsp;2023</a>)</li>
+      <li><em>Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</em> (<a
+          href="https://aclanthology.org/2022.sigdial-1.3/">SIGDIAL&nbsp;2022</a>)</li>
+      <li><em>SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</em> (<a
+          href="https://aclanthology.org/2022.acl-long.425/">ACL&nbsp;2022</a>)</li>
+    </ul>
+
+    <!-- Featured Projects -->
+    <h2>Featured Projects</h2>
+    <ul>
+      <li><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07">Taiwan-LLM</a>:
+        Traditional Mandarin LLMs for Taiwan</li>
+      <li><a href="https://x.com/yentinglin56/status/1891371623837544859">Mistral-Small-Reasoning</a>: Open-weight
+        reasoning model</li>
+    </ul>
+
+    <!-- Fun Facts -->
+    <h2>Fun Facts</h2>
+    <ul>
+      <li>Proud owner of two cats</li>
+      <li>Completed a full marathon</li>
+      <li>Part-time (trance) DJ during college</li>
+    </ul>
+  </main>
 </body>
+
 </html>
