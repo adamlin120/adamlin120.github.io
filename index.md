@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I will be joining Google DeepMind as a Research Scientist. I completed my Ph.D. at National Taiwan University in January 2025, advised by Professor Yun-Nung (Vivian) Chen in the Miulab.
+I am a Research Scientist at Google DeepMind working on Gemini for APAC since January 2026. I completed my Ph.D. at National Taiwan University in January 2025, advised by Professor Yun-Nung (Vivian) Chen in the Miulab.
 
 Research internships: Meta GenAI, Nvidia Research, Amazon Alexa AI, MediaTek Research, IBM Research.
 
@@ -18,6 +18,7 @@ My research focuses on reasoning and large language models (LLMs). For more deta
 [//]: # (- **Conversational AI:** task-oriented dialogue, dialogue state tracking, response generation)
 
 ## News
+- **[Jan. 2026]** Joined Google DeepMind as a Research Scientist, working on Gemini for APAC.
 - **[Feb. 2025]** Released an open-weight reasoning model, [**Mistral-Small-Reasoning**](https://huggingface.co/yentinglin/Mistral-Small-24B-Instruct-2501-reasoning)
 - **[Jan. 2025]** My work at Meta GenAI: [*Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback*](https://arxiv.org/pdf/2501.10799) has been published.
 - **[Jan. 2025]** I have successfully completed my Ph.D. at National Taiwan University.
