@@ -4,133 +4,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yenting Lin</title>
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <link rel="canonical" href="{{ site.canonical }}" />
+  <link rel="icon" href="{{ site.favicon }}" />
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:image" content="{{ site.avatar }}" />
+  <meta property="og:url" content="{{ site.canonical }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
+    rel="stylesheet" />
+
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
   <style>
-    /* ---- Global Typography & Colors ---- */
+    :root {
+      --bg: #fdfdfb;
+      --text: #1c1e21;
+      --muted: #5f6672;
+      --faint: #8a8f98;
+      --accent: #2856c9;
+      --accent-soft: rgba(40, 86, 201, 0.08);
+      --rule: rgba(28, 30, 33, 0.12);
+      --pill-bg: rgba(28, 30, 33, 0.05);
+      --pill-border: rgba(28, 30, 33, 0.14);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #15171a;
+        --text: #e8eaed;
+        --muted: #a3aab4;
+        --faint: #7c828c;
+        --accent: #8ab4f8;
+        --accent-soft: rgba(138, 180, 248, 0.12);
+        --rule: rgba(232, 234, 237, 0.14);
+        --pill-bg: rgba(232, 234, 237, 0.06);
+        --pill-border: rgba(232, 234, 237, 0.18);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       font-size: 16px;
     }
 
     body {
       margin: 0;
-      font-family: "Georgia", "Times New Roman", Times, serif;
-      background-color: #ffffff;
-      color: #000000;
-      line-height: 1.5;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* ---- Layout ---- */
     .container {
-      max-width: 680px;
-      /* similar reading width */
+      max-width: 740px;
       margin: 0 auto;
-      padding: 2.5rem 1.25rem;
+      padding: 3.5rem 1.4rem 2rem;
     }
 
-    /* ---- Headings ---- */
-    h1 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
-    h2 {
-      margin: 2rem 0 0.7rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    /* ---- Links ---- */
     a {
-      color: #0066cc;
-      /* default Safari/Chrome blue */
+      color: var(--accent);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    /* ---- Lists ---- */
+    /* ---- Header ---- */
+    .site-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .avatar {
+      width: 128px;
+      height: 128px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--rule);
+    }
+
+    .site-header h1 {
+      margin: 0 0 0.2rem;
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      margin: 0 0 0.8rem;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .role a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-underline-offset: 3px;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .social a,
+    .social button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.28rem 0.7rem;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .social a:hover,
+    .social button:hover {
+      text-decoration: none;
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    .social svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      opacity: 0.75;
+    }
+
+    /* ---- Sections ---- */
+    h2 {
+      margin: 2.6rem 0 1rem;
+      padding-bottom: 0.35rem;
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 600;
+      font-size: 1.45rem;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    h4 {
+      margin: 1.2rem 0 0.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.7rem 0;
+    }
+
     ul {
-      padding-left: 1.2rem;
-      margin-top: 0.3rem;
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
     }
 
-    ul li {
-      margin-bottom: 0.3rem;
+    li {
+      margin-bottom: 0.45rem;
     }
 
-    /* inline separators between anchor links */
-    .inline-links a:not(:last-child)::after {
-      content: " · ";
-      color: #000;
+    li::marker {
+      color: var(--faint);
+    }
+
+    /* ---- News ---- */
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-list li {
+      display: flex;
+      gap: 0.9rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      width: 5.2rem;
+      padding-top: 0.12rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--faint);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---- Publications ---- */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pub {
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-title {
+      font-weight: 500;
+      font-size: 1.0rem;
+    }
+
+    .pub-title a {
+      color: var(--text);
+    }
+
+    .pub-title a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .pub-authors {
+      margin-top: 0.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .pub-venue {
+      display: inline-block;
+      padding: 0.1rem 0.55rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+    }
+
+    .pub-note {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #c2563a;
+    }
+
+    .pub-meta a {
+      padding: 0.08rem 0.55rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      border: 1px solid var(--pill-border);
+      border-radius: 999px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .pub-meta a:hover {
+      text-decoration: none;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.82rem;
+      color: var(--faint);
+    }
+
+    /* ---- Mobile ---- */
+    @media (max-width: 560px) {
+      .container {
+        padding-top: 2.2rem;
+      }
+
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .avatar {
+        width: 104px;
+        height: 104px;
+      }
+
+      .site-header h1 {
+        font-size: 2rem;
+      }
+
+      .news-list li {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .news-date {
+        width: auto;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <!-- Name Header -->
-    <h1>Yenting Lin</h1>
+  <div class="container">
+    <header class="site-header">
+      <img class="avatar" src="{{ site.avatar }}" alt="Portrait of {{ site.title }}" />
+      <div>
+        <h1>{{ site.title }}</h1>
+        <p class="role">Research Scientist · <a href="https://deepmind.google">Google DeepMind</a></p>
+        <nav class="social">
+          <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-7 9.99V17c0 1.66 3.13 3 7 3s7-1.34 7-3v-4.01L12 17l-7-4.01z" />
+            </svg>Scholar</a>
+          <a href="{{ site.github_link }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.59.23 2.76.12 3.05.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg>GitHub</a>
+          <a href="{{ site.linkedin }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>LinkedIn</a>
+          <a href="{{ site.twitter }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z" />
+            </svg>Twitter</a>
+          <a href="{{ site.cv_link }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" />
+            </svg>Resume</a>
+          <button type="button" onclick="this.textContent = '{{ site.email }}'">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>Email</button>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Profile links (Google Scholar, GitHub, etc.) -->
-    <div class="inline-links">
-      <a href="https://scholar.google.com/citations?user=UWOV0tYAAAAJ&hl=en">Google Scholar</a>
-      <a href="https://github.com/adamlin120">GitHub</a>
-      <a href="https://www.linkedin.com/in/yen-ting-lin-416732b3/">LinkedIn</a>
-      <a href="./resume_Yenting_Lin.pdf">resume</a>
-      <a href="javascript:void(0)" onclick="this.innerHTML = 'adamlin120 (at) gmail.com'">Mail</a>
-    </div>
+    <main>
+      {{ content }}
+    </main>
 
-    <!-- Intro paragraph -->
-    <p>
-      Research Scientist at Google DeepMind.
-    </p>
-
-    <!-- Experience -->
-    <h2>Internship Experience</h2>
-    <ul>
-      <li><strong>Meta GenAI:</strong> Enhanced reasoning with stepwise feedback and long-form reasoning</li>
-      <li><strong>NVIDIA Research:</strong> Developed error correction methods for multimodal language models</li>
-      <li><strong>Amazon Alexa AI:</strong> Built factuality evaluation agent and synthetic data techniques</li>
-    </ul>
-
-    <!-- Selected Publications -->
-    <h2>Selected Publications</h2>
-    <ul>
-      <li><em>Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</em> (<a
-          href="https://arxiv.org/pdf/2501.10799">arXiv 2025</a>)</li>
-      <li><em>Measuring Taiwanese Mandarin Language Understanding</em> (<a
-          href="https://arxiv.org/abs/2403.20180">COLM&nbsp;2024</a>)</li>
-      <li><em>LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language
-          Models</em> (<a href="https://aclanthology.org/2023.nlp4convai-1.5/">NLP4ConvAI&nbsp;2023</a>)</li>
-      <li><em>Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</em> (<a
-          href="https://aclanthology.org/2023.eacl-main.107/">EACL&nbsp;2023</a>)</li>
-      <li><em>Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</em> (<a
-          href="https://aclanthology.org/2022.sigdial-1.3/">SIGDIAL&nbsp;2022</a>)</li>
-      <li><em>SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</em> (<a
-          href="https://aclanthology.org/2022.acl-long.425/">ACL&nbsp;2022</a>)</li>
-    </ul>
-
-    <!-- Featured Projects -->
-    <h2>Featured Projects</h2>
-    <ul>
-      <li><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07">Taiwan-LLM</a>:
-        Traditional Mandarin LLMs for Taiwan</li>
-      <li><a href="https://x.com/yentinglin56/status/1891371623837544859">Mistral-Small-Reasoning</a>: Open-weight
-        reasoning model</li>
-    </ul>
-
-    <!-- Fun Facts -->
-    <h2>Fun Facts</h2>
-    <ul>
-      <li>Proud owner of two cats</li>
-      <li>Completed a full marathon</li>
-      <li>Part-time (trance) DJ during college</li>
-    </ul>
-  </main>
+    <footer>
+      © <span id="year">2026</span> {{ site.title }}{% if site.enable_footnote %} · Powered by
+      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>{% endif %}
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+  </div>
 </body>
 
 </html>
