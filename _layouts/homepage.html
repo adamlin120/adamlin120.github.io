@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}" />
-  <meta name="keywords" content="{{ site.keywords }}" />
+  <title>{{ site.title | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}" />
+  <meta name="keywords" content="{{ site.keywords | escape }}" />
   <link rel="canonical" href="{{ site.canonical }}" />
-  <link rel="icon" href="{{ site.favicon }}" />
-  <meta property="og:title" content="{{ site.title }}" />
-  <meta property="og:description" content="{{ site.description }}" />
-  <meta property="og:image" content="{{ site.avatar }}" />
+  <link rel="icon" href="{{ site.favicon | relative_url }}" />
+  <meta property="og:title" content="{{ site.title | escape }}" />
+  <meta property="og:description" content="{{ site.description | escape }}" />
+  <meta property="og:image" content="{{ site.avatar | absolute_url }}" />
   <meta property="og:url" content="{{ site.canonical }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -344,7 +344,7 @@
 <body>
   <div class="container">
     <header class="site-header">
-      <img class="avatar" src="{{ site.avatar }}" alt="Portrait of {{ site.title }}" />
+      <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title | escape }}" />
       <div>
         <h1>{{ site.title }}</h1>
         <p class="role">Research Scientist · <a href="https://deepmind.google">Google DeepMind</a></p>
@@ -369,7 +369,8 @@
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" />
             </svg>Resume</a>
-          <button type="button" onclick="this.querySelector('span').textContent = '{{ site.email }}'">
+          <button type="button" data-email="{{ site.email | escape }}"
+            onclick="this.querySelector('span').textContent = this.dataset.email">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
             </svg><span>Email</span></button>

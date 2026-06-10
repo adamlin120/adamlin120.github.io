@@ -35,7 +35,7 @@
   </li>
 
   <li class="pub">
-    <div class="pub-title"><a href="http://arxiv.org/abs/2305.13711" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models</a></div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2305.13711" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models</a></div>
     <div class="pub-authors"><strong>Yen-Ting Lin</strong>, Yun-Nung Chen</div>
     <div class="pub-meta">
       <span class="pub-venue">NLP4ConvAI 2023</span>
