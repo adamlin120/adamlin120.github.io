@@ -9,6 +9,7 @@ email: adamlin120 (at) gmail.com
 keywords: yenting lin nlp ntu
 description: Discover the latest research and publications in NLP on Yenting academic website
 canonical: https://yentingl.com
+url: https://yentingl.com
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
@@ -20,9 +21,9 @@ twitter: https://twitter.com/yentinglin56
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/S__71377077.jpg
-favicon: ./assets/img/putracetol170604986.jpg
-favicon_dark: ./assets/img/putracetol170604986.jpg
+avatar: /assets/img/profile.jpg
+favicon: /assets/img/putracetol170604986.jpg
+favicon_dark: /assets/img/putracetol170604986.jpg
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
