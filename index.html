@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yenting Lin — Research Scientist, Google DeepMind</title>
+<meta name="description" content="Yenting Lin is a Research Scientist at Google DeepMind working on audio-native large language models. Creator of Taiwan-LLM and Llama-3-Taiwan.">
+<link rel="canonical" href="https://yentingl.com">
+<link rel="icon" href="/assets/img/putracetol170604986.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JK5PXDXS4M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-JK5PXDXS4M');
+</script>
+<style>
+  :root {
+    --ink: #1a1a1f;
+    --ink-soft: #4b4b55;
+    --ink-faint: #8a8a94;
+    --paper: #fdfdfc;
+    --hairline: #e6e6e2;
+    --signal: #0d7377;        /* deep teal — the "signal" color */
+    --signal-soft: #e3f1f0;
+    --spectro-1: #2a9d8f;     /* spectrogram-inspired gradient stops */
+    --spectro-2: #5b5f97;
+    --spectro-3: #e9a13b;
+    --max: 700px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .wave span { animation: none !important; }
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  a {
+    color: var(--signal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease;
+  }
+  a:hover, a:focus-visible { border-bottom-color: var(--signal); }
+  a:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; border-radius: 2px; }
+
+  /* ---------- hero ---------- */
+  header {
+    padding: 88px 0 56px;
+  }
+
+  .name {
+    font-family: 'Newsreader', serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  .name .zh {
+    font-weight: 400;
+    color: var(--ink-faint);
+    font-size: 0.5em;
+    margin-left: .4em;
+    letter-spacing: .08em;
+    white-space: nowrap;
+  }
+
+  /* signature: animated waveform under the name */
+  .wave {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 34px;
+    margin: 22px 0 26px;
+  }
+  .wave span {
+    width: 3px;
+    border-radius: 2px;
+    background: linear-gradient(to top, var(--spectro-1), var(--spectro-2), var(--spectro-3));
+    height: calc(var(--h) * 1%);
+    animation: pulse 2.6s ease-in-out infinite;
+    animation-delay: calc(var(--i) * -0.13s);
+  }
+  @keyframes pulse {
+    0%, 100% { height: calc(var(--h) * 1%); }
+    50%      { height: calc(var(--h) * 0.35%); }
+  }
+
+  .tagline {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink-soft);
+    max-width: 34ch;
+    line-height: 1.45;
+  }
+  .tagline em {
+    font-style: italic;
+    color: var(--signal);
+  }
+
+  .intro {
+    margin-top: 20px;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin-top: 28px;
+  }
+  .links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    transition: all .15s ease;
+  }
+  .links a:hover, .links a:focus-visible {
+    border-color: var(--signal);
+    color: var(--signal);
+    background: var(--signal-soft);
+  }
+
+  /* ---------- sections ---------- */
+  section { padding: 44px 0; border-top: 1px solid var(--hairline); }
+
+  h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 26px;
+  }
+
+  /* news */
+  .news { list-style: none; }
+  .news li {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 16px;
+    padding: 9px 0;
+  }
+  .news time {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    padding-top: 3px;
+  }
+
+  /* publications */
+  .pubs { list-style: none; }
+  .pubs li { padding: 14px 0; }
+  .pubs li + li { border-top: 1px dashed var(--hairline); }
+  .pub-title {
+    font-family: 'Newsreader', serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .pub-title a { color: var(--ink); }
+  .pub-title a:hover { border-bottom-color: var(--ink); }
+  .pub-meta {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .venue {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: .04em;
+    color: var(--signal);
+    background: var(--signal-soft);
+    padding: 2px 9px;
+    border-radius: 4px;
+  }
+  .pub-note {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+
+  /* projects */
+  .proj { display: grid; gap: 16px; }
+  .card {
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 20px 22px;
+    transition: border-color .15s ease;
+  }
+  .card:hover { border-color: var(--signal); }
+  .card h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .card p { margin-top: 6px; color: var(--ink-soft); font-size: 0.95rem; }
+  .metric {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--signal);
+  }
+
+  /* experience */
+  .exp { list-style: none; }
+  .exp li {
+    padding: 9px 0;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+  }
+  .exp .org { font-weight: 600; font-size: 0.95rem; }
+  .exp .what { color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* footer */
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 40px 0 72px;
+    color: var(--ink-faint);
+    font-size: 0.9rem;
+  }
+  footer .fun { margin-bottom: 18px; line-height: 1.8; }
+
+  @media (max-width: 540px) {
+    header { padding: 64px 0 44px; }
+    .news li { grid-template-columns: 64px 1fr; gap: 12px; }
+    .exp li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1 class="name">Yenting Lin<span class="zh">林彥廷</span></h1>
+
+    <div class="wave" aria-hidden="true">
+      <span style="--i:0;--h:30"></span><span style="--i:1;--h:55"></span><span style="--i:2;--h:80"></span><span style="--i:3;--h:45"></span><span style="--i:4;--h:95"></span><span style="--i:5;--h:60"></span><span style="--i:6;--h:35"></span><span style="--i:7;--h:75"></span><span style="--i:8;--h:100"></span><span style="--i:9;--h:50"></span><span style="--i:10;--h:70"></span><span style="--i:11;--h:40"></span><span style="--i:12;--h:85"></span><span style="--i:13;--h:55"></span><span style="--i:14;--h:30"></span><span style="--i:15;--h:65"></span><span style="--i:16;--h:90"></span><span style="--i:17;--h:45"></span><span style="--i:18;--h:60"></span><span style="--i:19;--h:35"></span>
+    </div>
+
+    <p class="tagline">Teaching language models to <em>listen and speak</em> — not just read and write.</p>
+
+    <p class="intro">
+      I'm a Research Scientist at <strong>Google DeepMind</strong>, working on audio-native
+      large language models: audio-to-audio architectures, post-training, and making
+      speech generation controllable. I also build open models for Traditional Chinese —
+      I created <a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07">Taiwan-LLM</a> and Llama-3-Taiwan.
+    </p>
+
+    <nav class="links" aria-label="Profiles">
+      <a href="https://scholar.google.com/citations?user=UWOV0tYAAAAJ&hl=en">Scholar</a>
+      <a href="https://github.com/adamlin120">GitHub</a>
+      <a href="https://huggingface.co/yentinglin">Hugging Face</a>
+      <a href="https://www.linkedin.com/in/yen-ting-lin-416732b3/">LinkedIn</a>
+      <a href="https://x.com/yentinglin56">X</a>
+      <a href="https://yentingl.com/resume_Yenting_Lin.pdf">CV</a>
+    </nav>
+  </header>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2026</time><span>Invited <strong>Prime Session speaker</strong> at COSCUP 2026, Taipei.</span></li>
+      <li><time>2025</time><span>Released <em>Step-KTO</em>, stepwise binary feedback for mathematical reasoning.</span></li>
+      <li><time>2024</time><span><em>Measuring Taiwanese Mandarin Language Understanding</em> accepted to COLM 2024.</span></li>
+      <li><time>2024</time><span>Released <strong>Llama-3-Taiwan</strong>, open-weight Traditional Chinese LLMs.</span></li>
+      <li><time>2023</time><span>Released <strong>Taiwan-LLM</strong>, the first open LLM series built for Taiwan.</span></li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <ul class="pubs">
+      <li>
+        <div class="pub-title"><a href="https://arxiv.org/pdf/2501.10799">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</a></div>
+        <div class="pub-meta"><span class="venue">arXiv 2025</span></div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://arxiv.org/abs/2403.20180">Measuring Taiwanese Mandarin Language Understanding</a></div>
+        <div class="pub-meta"><span class="venue">COLM 2024</span><span class="pub-note">Benchmark for Traditional Chinese LLM evaluation</span></div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with LLMs</a></div>
+        <div class="pub-meta"><span class="venue">NLP4ConvAI 2023</span></div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://aclanthology.org/2023.eacl-main.107/">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
+        <div class="pub-meta"><span class="venue">EACL 2023</span></div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://aclanthology.org/2022.sigdial-1.3/">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
+        <div class="pub-meta"><span class="venue">SIGDIAL 2022</span></div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://aclanthology.org/2022.acl-long.425/">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
+        <div class="pub-meta"><span class="venue">ACL 2022</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="opensource">
+    <h2>Open Source</h2>
+    <div class="proj">
+      <div class="card">
+        <h3><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07">Taiwan-LLM &amp; Llama-3-Taiwan</a></h3>
+        <p>Open-weight large language models built for Taiwanese Mandarin — pretraining data, instruction tuning, and evaluation for Traditional Chinese. Widely adopted by Taiwan's research community and industry.</p>
+        <!-- TODO: fill in real numbers, e.g. downloads / citations / GitHub stars
+        <span class="metric">[ TODO: downloads / citations / GitHub stars ]</span>
+        -->
+      </div>
+      <div class="card">
+        <h3><a href="https://x.com/yentinglin56/status/1891371623837544859">Mistral-Small-Reasoning</a></h3>
+        <p>Open-weight reasoning model distilled for efficient step-by-step problem solving.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="exp">
+      <li><span class="org">Google DeepMind</span><span class="what">Research Scientist — audio LLMs, post-training, controllability</span></li>
+      <li><span class="org">Meta GenAI</span><span class="what">Enhanced reasoning with stepwise feedback and long-form reasoning</span></li>
+      <li><span class="org">NVIDIA Research</span><span class="what">Error correction methods for multimodal language models</span></li>
+      <li><span class="org">Amazon Alexa AI</span><span class="what">Factuality evaluation agent and synthetic data techniques</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="fun">
+      Off the clock: serving two cats, one finished full marathon,
+      and a past life as a college trance DJ.
+    </p>
+    <p>© 2026 Yenting Lin · Tokyo</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
