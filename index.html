@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yenting Lin — Research Scientist, Google DeepMind</title>
 <meta name="description" content="Yenting Lin is a Research Scientist at Google DeepMind working on agentic post-training for long-horizon knowledge work, and on Gemini 3.8 Live Extended Thinking.">
-<link rel="canonical" href="https://yentingl.com">
-<link rel="icon" href="/assets/img/putracetol170604986.jpg">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&text=%E6%9E%97%E5%BD%A5%E5%BB%B7&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://yentingl.com">
+<link rel="icon" href="/assets/img/putracetol170604986.jpg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK5PXDXS4M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -20,373 +21,178 @@
 </script>
 <style>
   :root {
-    --ink: #17171a;
-    --ink-soft: #4a4a52;
-    --ink-faint: #8b8a90;
-    --paper: #f8f7f3;
-    --raised: #ffffff;
-    --hairline: #e4e2db;
-    --accent: #2f4bd8;         /* links, the reasoning lane */
-    --accent-soft: #e8ecfc;
-    --warm: #c2703d;           /* the voice lane */
-    --max: 720px;
+    --text: #141413;
+    --secondary: #5e5d59;
+    --tertiary: #87867f;
+    --bg: #faf9f5;
+    --fill: #f0eee6;
+    --separator: #e3dacc;
+    --link: #141413;
+    --clay: #b8552f;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --ink: #ebeaf0;
-      --ink-soft: #a9a8b3;
-      --ink-faint: #74737e;
-      --paper: #111114;
-      --raised: #18181c;
-      --hairline: #2a2a31;
-      --accent: #8ea0ff;
-      --accent-soft: #1c2140;
-      --warm: #e09a68;
+      --text: #faf9f5;
+      --secondary: #b0aea5;
+      --tertiary: #87867f;
+      --bg: #141413;
+      --fill: #1f1e1d;
+      --separator: #3d3d3a;
+      --link: #faf9f5;
+      --clay: #e08a6d;
     }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
-
   body {
-    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    color: var(--ink);
-    background: var(--paper);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
   }
 
   .wrap {
-    max-width: var(--max);
+    max-width: 692px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 22px;
   }
 
   a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color .15s ease;
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: var(--separator);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color .15s ease, text-decoration-color .15s ease;
   }
-  a:hover, a:focus-visible { border-bottom-color: currentColor; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-
-  .mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+  a:hover { color: var(--clay); text-decoration-color: var(--clay); }
+  a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 4px; }
 
   /* ---------- hero ---------- */
-  header { padding: 92px 0 52px; }
+  header { padding: 120px 0 72px; }
 
-  .name {
-    font-family: 'Newsreader', serif;
+  h1 {
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
     font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: clamp(2.5rem, 7.5vw, 3.6rem);
+    font-size: clamp(42px, 8vw, 60px);
+    font-weight: 400;
     line-height: 1.05;
     letter-spacing: -0.02em;
   }
-  .name .zh {
-    font-family: 'Noto Serif TC', 'PingFang TC', 'Microsoft JhengHei', serif;
+  h1 .zh {
+    font-family: "Noto Serif TC", "PingFang TC", serif;
     font-weight: 500;
-    color: var(--ink-faint);
-    font-size: 0.48em;
-    margin-left: .45em;
-    letter-spacing: .08em;
+    color: var(--tertiary);
+    font-size: 0.5em;
+    margin-left: 0.4em;
+    letter-spacing: 0.04em;
     white-space: nowrap;
   }
 
   .role {
-    margin-top: 14px;
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.8rem;
-    letter-spacing: .02em;
-    color: var(--ink-faint);
+    margin-top: 10px;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--secondary);
   }
-  .role b { color: var(--ink-soft); font-weight: 500; }
-
-  /* signature: a long-horizon trace. The voice lane keeps streaming
-     while the reasoning lane works through steps in the background. */
-  .trace {
-    margin: 34px 0 34px;
-    padding: 16px 18px 14px;
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    background: var(--raised);
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.7rem;
-    color: var(--ink-faint);
-  }
-  .trace-head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    letter-spacing: .04em;
-  }
-  .trace-head .live::before {
-    content: "";
-    display: inline-block;
-    width: 6px; height: 6px;
-    margin-right: 7px;
-    border-radius: 50%;
-    background: var(--warm);
-    vertical-align: 1px;
-    animation: blink 1.6s ease-in-out infinite;
-  }
-  @keyframes blink { 50% { opacity: .25; } }
-
-  .lane {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    align-items: center;
-    gap: 10px;
-  }
-  .lane + .lane { margin-top: 10px; }
-
-  .voice {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    height: 26px;
-    overflow: hidden;
-  }
-  .voice span {
-    flex: 1 0 2px;
-    max-width: 3px;
-    border-radius: 2px;
-    background: var(--warm);
-    opacity: .75;
-    height: calc(var(--h) * 1%);
-    animation: speak 2.4s ease-in-out infinite;
-    animation-delay: calc(var(--i) * -0.09s);
-  }
-  @keyframes speak {
-    0%, 100% { height: calc(var(--h) * 1%); }
-    50%      { height: calc(var(--h) * 0.3%); }
-  }
-
-  .steps {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 26px;
-  }
-  .steps::before {               /* the rail */
-    content: "";
-    position: absolute;
-    left: 0; right: 0; top: 50%;
-    border-top: 1px dashed var(--hairline);
-  }
-  .step {
-    position: relative;
-    padding: 2px 7px;
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    background: var(--raised);
-    color: var(--ink-faint);
-    white-space: nowrap;
-    transition: color .3s ease, border-color .3s ease, background .3s ease;
-  }
-  .step.done { color: var(--accent); border-color: var(--accent); }
-  .step.now  { color: var(--raised); background: var(--accent); border-color: var(--accent); }
 
   .intro {
-    color: var(--ink-soft);
-    max-width: 60ch;
-    font-size: 1.04rem;
+    margin-top: 36px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--secondary);
   }
-  .intro strong { color: var(--ink); font-weight: 600; }
-  .intro + .intro { margin-top: 12px; }
+  .intro + .intro { margin-top: 16px; }
+  .intro strong { color: var(--text); font-weight: 500; }
 
   .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 10px;
-    margin-top: 28px;
+    gap: 10px 28px;
+    margin-top: 32px;
+    font-size: 17px;
   }
-  .links a {
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.78rem;
-    padding: 6px 14px;
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    color: var(--ink-soft);
-    background: var(--raised);
-    transition: all .15s ease;
-  }
-  .links a:hover, .links a:focus-visible {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-soft);
-  }
+  .links a { font-size: 15px; color: var(--secondary); text-decoration: none; }
+  .links a:hover { color: var(--clay); }
 
   /* ---------- sections ---------- */
-  section { padding: 44px 0; border-top: 1px solid var(--hairline); }
+  section { padding: 56px 0; border-top: 1px solid var(--separator); }
 
   h2 {
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.74rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-bottom: 24px;
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
   }
 
-  /* featured */
-  .feature {
-    display: block;
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    padding: 24px 24px 22px;
-    background: var(--raised);
-    color: var(--ink);
-    transition: border-color .15s ease, transform .15s ease;
+  /* latest */
+  .tile {
+    background: var(--fill);
+    border-radius: 16px;
+    padding: 32px;
   }
-  .feature:hover, .feature:focus-visible {
-    border-color: var(--accent);
-    transform: translateY(-1px);
-  }
-  .feature .kicker {
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: .04em;
-  }
-  .feature h3 {
-    margin-top: 8px;
-    font-family: 'Newsreader', serif;
-    font-size: 1.55rem;
+  .tile .eyebrow {
+    font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--clay);
+  }
+  .tile h3 {
+    margin-top: 6px;
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
-  .feature p {
+  .tile p {
     margin-top: 10px;
-    color: var(--ink-soft);
-    font-size: 0.97rem;
-    max-width: 58ch;
+    color: var(--secondary);
   }
-  .feature .more {
-    display: inline-block;
-    margin-top: 14px;
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.75rem;
-    color: var(--accent);
-  }
+  .tile .more { display: inline-block; margin-top: 14px; }
+  .tile .more::after { content: " →"; }
 
-  /* focus areas */
-  .focus {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  .focus li {
-    padding-top: 12px;
-    border-top: 2px solid var(--ink);
-  }
-  .focus .n {
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.7rem;
-    color: var(--ink-faint);
-  }
-  .focus h3 {
-    margin-top: 4px;
-    font-size: 0.98rem;
-    font-weight: 600;
-    line-height: 1.35;
-  }
-  .focus p {
-    margin-top: 6px;
-    font-size: 0.88rem;
-    color: var(--ink-soft);
-    line-height: 1.55;
-  }
+  /* lists */
+  .list { list-style: none; }
+  .list li { padding: 14px 0; }
+  .list li + li { border-top: 1px solid var(--separator); }
+  .list .title { font-weight: 500; }
+  .list .title a { color: var(--text); text-decoration: none; }
+  .list .title a:hover { color: var(--clay); }
+  .list .sub { margin-top: 2px; font-size: 15px; color: var(--secondary); }
 
-  /* experience */
-  .exp { list-style: none; }
+  /* experience rows */
   .exp li {
-    padding: 10px 0;
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 160px 1fr;
     gap: 16px;
   }
-  .exp li + li { border-top: 1px dashed var(--hairline); }
-  .exp .org { font-weight: 600; font-size: 0.95rem; }
-  .exp .what { color: var(--ink-soft); font-size: 0.95rem; }
-
-  /* publications */
-  .pubs { list-style: none; }
-  .pubs li { padding: 13px 0; }
-  .pubs li + li { border-top: 1px dashed var(--hairline); }
-  .pub-title {
-    font-family: 'Newsreader', serif;
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  .pub-title a { color: var(--ink); }
-  .pub-meta {
-    margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-  }
-  .venue {
-    font-family: 'Geist Mono', ui-monospace, monospace;
-    font-size: 0.7rem;
-    letter-spacing: .03em;
-    color: var(--accent);
-    background: var(--accent-soft);
-    padding: 2px 9px;
-    border-radius: 4px;
-  }
-  .pub-note { font-size: 0.85rem; color: var(--ink-faint); }
-
-  /* open source */
-  .proj { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .card {
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    padding: 20px 22px;
-    background: var(--raised);
-    transition: border-color .15s ease;
-  }
-  .card:hover { border-color: var(--accent); }
-  .card h3 {
-    font-family: 'Newsreader', serif;
-    font-size: 1.18rem;
-    font-weight: 500;
-    line-height: 1.3;
-  }
-  .card p { margin-top: 6px; color: var(--ink-soft); font-size: 0.92rem; }
+  .exp .sub { margin-top: 0; font-size: 17px; }
 
   /* footer */
   footer {
-    border-top: 1px solid var(--hairline);
-    padding: 40px 0 72px;
-    color: var(--ink-faint);
-    font-size: 0.9rem;
+    border-top: 1px solid var(--separator);
+    padding: 32px 0 64px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--tertiary);
   }
-  footer .fun { margin-bottom: 18px; line-height: 1.8; }
+  footer p + p { margin-top: 6px; }
 
   @media (max-width: 600px) {
-    header { padding: 64px 0 44px; }
-    .focus { grid-template-columns: 1fr; gap: 18px; }
-    .proj { grid-template-columns: 1fr; }
-    .exp li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
-    .lane { grid-template-columns: 40px 1fr; }
-    .step.opt { display: none; }   /* keep the rail legible on phones */
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .voice span, .trace-head .live::before { animation: none !important; }
-    .feature:hover { transform: none; }
+    header { padding: 80px 0 56px; }
+    .role { font-size: 19px; }
+    .intro { font-size: 17px; }
+    section { padding: 44px 0; }
+    .tile { padding: 24px; }
+    .exp li { grid-template-columns: 1fr; gap: 2px; }
   }
 </style>
 </head>
@@ -395,39 +201,16 @@
 <div class="wrap">
 
   <header>
-    <h1 class="name">Yenting Lin<span class="zh" lang="zh-Hant">林彥廷</span></h1>
-    <p class="role"><b>Research Scientist</b> · Google DeepMind · Tokyo</p>
-
-    <div class="trace" aria-hidden="true">
-      <div class="trace-head"><span class="live">session</span><span id="clock">t+00:00:00</span></div>
-      <div class="lane">
-        <span>voice</span>
-        <div class="voice" id="voice"></div>
-      </div>
-      <div class="lane">
-        <span>think</span>
-        <div class="steps" id="steps">
-          <span class="step">plan</span>
-          <span class="step opt">search</span>
-          <span class="step">read</span>
-          <span class="step opt">analyze</span>
-          <span class="step">draft</span>
-          <span class="step">verify</span>
-          <span class="step opt">ship</span>
-        </div>
-      </div>
-    </div>
+    <h1>Yenting Lin<span class="zh" lang="zh-Hant">林彥廷</span></h1>
+    <p class="role">Research Scientist, Google DeepMind</p>
 
     <p class="intro">
-      I work on <strong>agentic post-training</strong> for <strong>long-horizon knowledge work</strong>:
-      training models to carry a real task — research, analysis, writing — from the first
-      step to a finished result, over hours of tool use instead of a single reply.
+      I work on <strong>agentic post-training</strong> for <strong>long-horizon knowledge work</strong>,
+      training models to carry a real task from the first step to a finished result.
     </p>
     <p class="intro">
-      Most recently I worked on
-      <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Gemini 3.8 Live Extended Thinking</a>,
-      a voice model that keeps the conversation going while it reasons and calls tools in the background.
-      Before that: audio-native LLMs, and
+      Most recently, <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Gemini 3.8 Live Extended Thinking</a>.
+      Before that, audio-native LLMs and
       <a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">open models for Traditional Chinese</a>.
     </p>
 
@@ -445,146 +228,76 @@
 
   <section id="latest">
     <h2>Latest</h2>
-    <a class="feature" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">
-      <span class="kicker">Sep 2026 · Google DeepMind</span>
+    <div class="tile">
+      <p class="eyebrow">September 2026</p>
       <h3>Gemini 3.8 Live Extended Thinking</h3>
-      <p>
-        Real-time voice, with deliberate reasoning underneath. The model works through
-        multi-step problems and runs tool calls asynchronously while it keeps streaming
-        audio, so hard requests no longer mean dead air.
-      </p>
-      <span class="more">Read the announcement →</span>
-    </a>
-  </section>
-
-  <section id="focus">
-    <h2>Research Focus</h2>
-    <ul class="focus">
-      <li>
-        <span class="n">01</span>
-        <h3>Long-horizon agents</h3>
-        <p>Models that plan, act, and recover across many steps of real knowledge work.</p>
-      </li>
-      <li>
-        <span class="n">02</span>
-        <h3>Agentic post-training</h3>
-        <p>RL environments, rewards, and feedback for tasks with no single right answer.</p>
-      </li>
-      <li>
-        <span class="n">03</span>
-        <h3>Reasoning in real time</h3>
-        <p>Thinking and tool use that run alongside a live conversation, not before it.</p>
-      </li>
-    </ul>
+      <p>Real-time voice that reasons and calls tools in the background, without breaking the conversation.</p>
+      <a class="more" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Read the announcement</a>
+    </div>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
-    <ul class="exp">
-      <li><span class="org">Google DeepMind</span><span class="what">Research Scientist — agentic post-training, long-horizon tasks, Gemini Live; previously audio LLMs</span></li>
-      <li><span class="org">Meta GenAI</span><span class="what">Enhanced reasoning with stepwise feedback and long-form reasoning</span></li>
-      <li><span class="org">NVIDIA Research</span><span class="what">Error correction methods for multimodal language models</span></li>
-      <li><span class="org">Amazon Alexa AI</span><span class="what">Factuality evaluation agent and synthetic data techniques</span></li>
+    <ul class="list exp">
+      <li><span class="title">Google DeepMind</span><span class="sub">Agentic post-training, long-horizon tasks, Gemini Live</span></li>
+      <li><span class="title">Meta GenAI</span><span class="sub">Reasoning with stepwise feedback</span></li>
+      <li><span class="title">NVIDIA Research</span><span class="sub">Error correction for multimodal LMs</span></li>
+      <li><span class="title">Amazon Alexa AI</span><span class="sub">Factuality evaluation and synthetic data</span></li>
     </ul>
   </section>
 
   <section id="publications">
     <h2>Selected Publications</h2>
-    <ul class="pubs">
+    <ul class="list">
       <li>
-        <div class="pub-title"><a href="https://arxiv.org/pdf/2501.10799" target="_blank" rel="noopener">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</a></div>
-        <div class="pub-meta"><span class="venue">arXiv 2025</span></div>
+        <div class="title"><a href="https://arxiv.org/pdf/2501.10799" target="_blank" rel="noopener">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</a></div>
+        <div class="sub">arXiv 2025</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://arxiv.org/abs/2403.20180" target="_blank" rel="noopener">Measuring Taiwanese Mandarin Language Understanding</a></div>
-        <div class="pub-meta"><span class="venue">COLM 2024</span><span class="pub-note">Benchmark for Traditional Chinese LLM evaluation</span></div>
+        <div class="title"><a href="https://arxiv.org/abs/2403.20180" target="_blank" rel="noopener">Measuring Taiwanese Mandarin Language Understanding</a></div>
+        <div class="sub">COLM 2024</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with LLMs</a></div>
-        <div class="pub-meta"><span class="venue">NLP4ConvAI 2023</span></div>
+        <div class="title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with LLMs</a></div>
+        <div class="sub">NLP4ConvAI 2023</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2023.eacl-main.107/" target="_blank" rel="noopener">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
-        <div class="pub-meta"><span class="venue">EACL 2023</span></div>
+        <div class="title"><a href="https://aclanthology.org/2023.eacl-main.107/" target="_blank" rel="noopener">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
+        <div class="sub">EACL 2023</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2022.sigdial-1.3/" target="_blank" rel="noopener">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
-        <div class="pub-meta"><span class="venue">SIGDIAL 2022</span></div>
+        <div class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/" target="_blank" rel="noopener">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
+        <div class="sub">SIGDIAL 2022</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2022.acl-long.425/" target="_blank" rel="noopener">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
-        <div class="pub-meta"><span class="venue">ACL 2022</span></div>
+        <div class="title"><a href="https://aclanthology.org/2022.acl-long.425/" target="_blank" rel="noopener">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
+        <div class="sub">ACL 2022</div>
       </li>
     </ul>
   </section>
 
   <section id="opensource">
     <h2>Open Source</h2>
-    <div class="proj">
-      <div class="card">
-        <h3><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">Traditional Chinese LLMs</a></h3>
-        <p>Open-weight models for Traditional Chinese, covering pretraining data, instruction tuning, and evaluation. Widely adopted across research and industry.</p>
-      </div>
-      <div class="card">
-        <h3><a href="https://x.com/yentinglin56/status/1891371623837544859" target="_blank" rel="noopener">Mistral-Small-Reasoning</a></h3>
-        <p>Open-weight reasoning model distilled for efficient step-by-step problem solving.</p>
-      </div>
-    </div>
+    <ul class="list">
+      <li>
+        <div class="title"><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">Traditional Chinese LLMs</a></div>
+        <div class="sub">Open-weight models for Traditional Chinese, from pretraining data to evaluation.</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://x.com/yentinglin56/status/1891371623837544859" target="_blank" rel="noopener">Mistral-Small-Reasoning</a></div>
+        <div class="sub">Open-weight reasoning model distilled for efficient step-by-step problem solving.</div>
+      </li>
+    </ul>
   </section>
 
   </main>
 
   <footer>
-    <p class="fun">
-      Off the clock: serving two cats, one finished full marathon,
-      and a past life as a college trance DJ.
-    </p>
-    <p>© <span id="year">2026</span> Yenting Lin · Tokyo</p>
+    <p>Off the clock: two cats, one full marathon, and a past life as a college trance DJ.</p>
+    <p>© 2026 Yenting Lin · Tokyo</p>
   </footer>
 
 </div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  (function () {
-    // voice lane: a deterministic, speech-like envelope
-    var voice = document.getElementById('voice');
-    var html = '';
-    for (var i = 0; i < 160; i++) {
-      var env = 0.55 + 0.45 * Math.sin(i / 6.5);
-      var h = Math.round(18 + 78 * env * (0.45 + 0.55 * Math.abs(Math.sin(i * 1.7))));
-      html += '<span style="--i:' + i + ';--h:' + h + '"></span>';
-    }
-    voice.innerHTML = html;
-
-    var steps = document.querySelectorAll('#steps .step');
-    var clock = document.getElementById('clock');
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    function render(k) {
-      for (var j = 0; j < steps.length; j++) {
-        steps[j].className = steps[j].className.replace(/\s*(done|now)/g, '') +
-          (j < k ? ' done' : j === k ? ' now' : '');
-      }
-    }
-
-    if (reduced) { render(steps.length - 1); return; }
-
-    // reasoning lane: steps advance in the background while voice keeps streaming
-    var k = 0;
-    render(k);
-    setInterval(function () { k = (k + 1) % (steps.length + 1); render(k); }, 1400);
-
-    // elapsed clock: a long-horizon session, ticking faster than real time
-    var t = 0;
-    setInterval(function () {
-      t += 37;
-      var s = t % 60, m = Math.floor(t / 60) % 60, h = Math.floor(t / 3600) % 100;
-      clock.textContent = 't+' + [h, m, s].map(function (x) { return (x < 10 ? '0' : '') + x; }).join(':');
-    }, 1000);
-  })();
-</script>
 
 </body>
 </html>
