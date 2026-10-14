@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yenting Lin — Research Scientist, Google DeepMind</title>
-<meta name="description" content="Yenting Lin is a Research Scientist at Google DeepMind working on audio-native large language models and open Traditional Chinese LLMs.">
-<link rel="canonical" href="https://yentingl.com">
-<link rel="icon" href="/assets/img/putracetol170604986.jpg">
+<meta name="description" content="Yenting Lin is a Research Scientist at Google DeepMind working on agentic post-training for long-horizon knowledge work, and on Gemini 3.8 Live Extended Thinking.">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&text=%E6%9E%97%E5%BD%A5%E5%BB%B7&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://yentingl.com">
+<link rel="icon" href="/assets/img/putracetol170604986.jpg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK5PXDXS4M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -20,259 +21,178 @@
 </script>
 <style>
   :root {
-    --ink: #1a1a1f;
-    --ink-soft: #4b4b55;
-    --ink-faint: #8a8a94;
-    --paper: #fdfdfc;
-    --hairline: #e6e6e2;
-    --signal: #0d7377;        /* deep teal — the "signal" color */
-    --signal-soft: #e3f1f0;
-    --spectro-1: #3d3a37;     /* ink-to-warm gradient stops */
-    --spectro-2: #7d6e62;
-    --spectro-3: #c08e6a;
-    --max: 700px;
+    --text: #141413;
+    --secondary: #5e5d59;
+    --tertiary: #87867f;
+    --bg: #faf9f5;
+    --fill: #f0eee6;
+    --separator: #e3dacc;
+    --link: #141413;
+    --clay: #b8552f;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --ink: #e7e7ec;
-      --ink-soft: #a8a8b3;
-      --ink-faint: #73737e;
-      --paper: #121216;
-      --hairline: #2a2a31;
-      --signal: #2ec4c4;
-      --signal-soft: #11302f;
-      --spectro-1: #c5c0ba;
-      --spectro-2: #cfb39e;
-      --spectro-3: #d9a87e;
+      --text: #faf9f5;
+      --secondary: #b0aea5;
+      --tertiary: #87867f;
+      --bg: #141413;
+      --fill: #1f1e1d;
+      --separator: #3d3d3a;
+      --link: #faf9f5;
+      --clay: #e08a6d;
     }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .wave span { animation: none !important; }
-  }
-
   body {
-    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    color: var(--ink);
-    background: var(--paper);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang TC", "Noto Sans TC", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
   }
 
   .wrap {
-    max-width: var(--max);
+    max-width: 692px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 22px;
   }
 
   a {
-    color: var(--signal);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color .15s ease;
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: var(--separator);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color .15s ease, text-decoration-color .15s ease;
   }
-  a:hover, a:focus-visible { border-bottom-color: var(--signal); }
-  a:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; border-radius: 2px; }
+  a:hover { color: var(--clay); text-decoration-color: var(--clay); }
+  a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 4px; }
 
   /* ---------- hero ---------- */
-  header {
-    padding: 88px 0 56px;
-  }
+  header { padding: 120px 0 72px; }
 
-  .name {
-    font-family: 'Newsreader', serif;
+  h1 {
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
     font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: clamp(2.4rem, 7vw, 3.4rem);
-    line-height: 1.1;
-    letter-spacing: -0.015em;
+    font-size: clamp(42px, 8vw, 60px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   }
-
-  .name .zh {
-    font-family: 'Noto Serif TC', 'PingFang TC', 'Microsoft JhengHei', serif;
+  h1 .zh {
+    font-family: "Noto Serif TC", "PingFang TC", serif;
     font-weight: 500;
-    color: var(--ink-faint);
+    color: var(--tertiary);
     font-size: 0.5em;
-    margin-left: .4em;
-    letter-spacing: .08em;
+    margin-left: 0.4em;
+    letter-spacing: 0.04em;
     white-space: nowrap;
   }
 
-  /* signature: animated waveform under the name */
-  .wave {
-    display: flex;
-    align-items: flex-end;
-    gap: 3px;
-    height: 34px;
-    margin: 22px 0 26px;
-  }
-  .wave span {
-    width: 3px;
-    border-radius: 2px;
-    background: linear-gradient(to top, var(--spectro-1), var(--spectro-2), var(--spectro-3));
-    height: calc(var(--h) * 1%);
-    animation: pulse 2.6s ease-in-out infinite;
-    animation-delay: calc(var(--i) * -0.13s);
-  }
-  @keyframes pulse {
-    0%, 100% { height: calc(var(--h) * 1%); }
-    50%      { height: calc(var(--h) * 0.35%); }
-  }
-
-  .tagline {
-    font-family: 'Newsreader', serif;
-    font-style: italic;
-    font-size: 1.3rem;
-    color: var(--ink-soft);
-    max-width: 34ch;
-    line-height: 1.45;
-  }
-  .tagline em {
-    font-style: italic;
-    color: var(--signal);
+  .role {
+    margin-top: 10px;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--secondary);
   }
 
   .intro {
-    margin-top: 20px;
-    color: var(--ink-soft);
-    max-width: 56ch;
+    margin-top: 36px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--secondary);
   }
+  .intro + .intro { margin-top: 16px; }
+  .intro strong { color: var(--text); font-weight: 500; }
 
   .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 10px;
-    margin-top: 28px;
+    gap: 10px 28px;
+    margin-top: 32px;
+    font-size: 17px;
   }
-  .links a {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    padding: 6px 14px;
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    color: var(--ink-soft);
-    transition: all .15s ease;
-  }
-  .links a:hover, .links a:focus-visible {
-    border-color: var(--signal);
-    color: var(--signal);
-    background: var(--signal-soft);
-  }
+  .links a { font-size: 15px; color: var(--secondary); text-decoration: none; }
+  .links a:hover { color: var(--clay); }
 
   /* ---------- sections ---------- */
-  section { padding: 44px 0; border-top: 1px solid var(--hairline); }
+  section { padding: 56px 0; border-top: 1px solid var(--separator); }
 
   h2 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.78rem;
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  /* latest */
+  .tile {
+    background: var(--fill);
+    border-radius: 16px;
+    padding: 32px;
+  }
+  .tile .eyebrow {
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-bottom: 26px;
+    letter-spacing: 0.02em;
+    color: var(--clay);
   }
+  .tile h3 {
+    margin-top: 6px;
+    font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .tile p {
+    margin-top: 10px;
+    color: var(--secondary);
+  }
+  .tile .more { display: inline-block; margin-top: 14px; }
+  .tile .more::after { content: " →"; }
 
-  /* news */
-  .news { list-style: none; }
-  .news li {
-    display: grid;
-    grid-template-columns: 84px 1fr;
-    gap: 16px;
-    padding: 9px 0;
-  }
-  .news time {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--ink-faint);
-    padding-top: 3px;
-  }
+  /* lists */
+  .list { list-style: none; }
+  .list li { padding: 14px 0; }
+  .list li + li { border-top: 1px solid var(--separator); }
+  .list .title { font-weight: 500; }
+  .list .title a { color: var(--text); text-decoration: none; }
+  .list .title a:hover { color: var(--clay); }
+  .list .sub { margin-top: 2px; font-size: 15px; color: var(--secondary); }
 
-  /* publications */
-  .pubs { list-style: none; }
-  .pubs li { padding: 14px 0; }
-  .pubs li + li { border-top: 1px dashed var(--hairline); }
-  .pub-title {
-    font-family: 'Newsreader', serif;
-    font-size: 1.12rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  .pub-title a { color: var(--ink); }
-  .pub-title a:hover { border-bottom-color: var(--ink); }
-  .pub-meta {
-    margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-  }
-  .venue {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: .04em;
-    color: var(--signal);
-    background: var(--signal-soft);
-    padding: 2px 9px;
-    border-radius: 4px;
-  }
-  .pub-note {
-    font-size: 0.85rem;
-    color: var(--ink-faint);
-  }
-
-  /* projects */
-  .proj { display: grid; gap: 16px; }
-  .card {
-    border: 1px solid var(--hairline);
-    border-radius: 10px;
-    padding: 20px 22px;
-    transition: border-color .15s ease;
-  }
-  .card:hover { border-color: var(--signal); }
-  .card h3 {
-    font-family: 'Newsreader', serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  .card p { margin-top: 6px; color: var(--ink-soft); font-size: 0.95rem; }
-  .metric {
-    display: inline-block;
-    margin-top: 12px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--signal);
-  }
-
-  /* experience */
-  .exp { list-style: none; }
+  /* experience rows */
   .exp li {
-    padding: 9px 0;
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 160px 1fr;
     gap: 16px;
   }
-  .exp .org { font-weight: 600; font-size: 0.95rem; }
-  .exp .what { color: var(--ink-soft); font-size: 0.95rem; }
+  .exp .sub { margin-top: 0; font-size: 17px; }
 
   /* footer */
   footer {
-    border-top: 1px solid var(--hairline);
-    padding: 40px 0 72px;
-    color: var(--ink-faint);
-    font-size: 0.9rem;
+    border-top: 1px solid var(--separator);
+    padding: 32px 0 64px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--tertiary);
   }
-  footer .fun { margin-bottom: 18px; line-height: 1.8; }
+  footer p + p { margin-top: 6px; }
 
-  @media (max-width: 540px) {
-    header { padding: 64px 0 44px; }
-    .news li { grid-template-columns: 64px 1fr; gap: 12px; }
-    .exp li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+  @media (max-width: 600px) {
+    header { padding: 80px 0 56px; }
+    .role { font-size: 19px; }
+    .intro { font-size: 17px; }
+    section { padding: 44px 0; }
+    .tile { padding: 24px; }
+    .exp li { grid-template-columns: 1fr; gap: 2px; }
   }
 </style>
 </head>
@@ -281,16 +201,16 @@
 <div class="wrap">
 
   <header>
-    <h1 class="name">Yenting Lin<span class="zh" lang="zh-Hant">林彥廷</span></h1>
-
-    <div class="wave" aria-hidden="true">
-      <span style="--i:0;--h:30"></span><span style="--i:1;--h:55"></span><span style="--i:2;--h:80"></span><span style="--i:3;--h:45"></span><span style="--i:4;--h:95"></span><span style="--i:5;--h:60"></span><span style="--i:6;--h:35"></span><span style="--i:7;--h:75"></span><span style="--i:8;--h:100"></span><span style="--i:9;--h:50"></span><span style="--i:10;--h:70"></span><span style="--i:11;--h:40"></span><span style="--i:12;--h:85"></span><span style="--i:13;--h:55"></span><span style="--i:14;--h:30"></span><span style="--i:15;--h:65"></span><span style="--i:16;--h:90"></span><span style="--i:17;--h:45"></span><span style="--i:18;--h:60"></span><span style="--i:19;--h:35"></span>
-    </div>
+    <h1>Yenting Lin<span class="zh" lang="zh-Hant">林彥廷</span></h1>
+    <p class="role">Research Scientist, Google DeepMind</p>
 
     <p class="intro">
-      I'm a Research Scientist at <strong>Google DeepMind</strong>, working on audio-native
-      large language models: post-training and making
-      speech generation steerable. Previously, I built
+      I work on <strong>agentic post-training</strong> for <strong>long-horizon knowledge work</strong>,
+      training models to carry a real task from the first step to a finished result.
+    </p>
+    <p class="intro">
+      Most recently, <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Gemini 3.8 Live Extended Thinking</a>.
+      Before that, audio-native LLMs and
       <a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">open models for Traditional Chinese</a>.
     </p>
 
@@ -306,72 +226,75 @@
 
   <main>
 
+  <section id="latest">
+    <h2>Latest</h2>
+    <div class="tile">
+      <p class="eyebrow">September 2026</p>
+      <h3>Gemini 3.8 Live Extended Thinking</h3>
+      <p>Real-time voice that reasons and calls tools in the background, without breaking the conversation.</p>
+      <a class="more" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener">Read the announcement</a>
+    </div>
+  </section>
+
   <section id="experience">
     <h2>Experience</h2>
-    <ul class="exp">
-      <li><span class="org">Google DeepMind</span><span class="what">Research Scientist — audio LLMs, post-training, controllability</span></li>
-      <li><span class="org">Meta GenAI</span><span class="what">Enhanced reasoning with stepwise feedback and long-form reasoning</span></li>
-      <li><span class="org">NVIDIA Research</span><span class="what">Error correction methods for multimodal language models</span></li>
-      <li><span class="org">Amazon Alexa AI</span><span class="what">Factuality evaluation agent and synthetic data techniques</span></li>
+    <ul class="list exp">
+      <li><span class="title">Google DeepMind</span><span class="sub">Agentic post-training, long-horizon tasks, Gemini Live</span></li>
+      <li><span class="title">Meta GenAI</span><span class="sub">Reasoning with stepwise feedback</span></li>
+      <li><span class="title">NVIDIA Research</span><span class="sub">Error correction for multimodal LMs</span></li>
+      <li><span class="title">Amazon Alexa AI</span><span class="sub">Factuality evaluation and synthetic data</span></li>
     </ul>
   </section>
 
   <section id="publications">
     <h2>Selected Publications</h2>
-    <ul class="pubs">
+    <ul class="list">
       <li>
-        <div class="pub-title"><a href="https://arxiv.org/pdf/2501.10799" target="_blank" rel="noopener">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</a></div>
-        <div class="pub-meta"><span class="venue">arXiv 2025</span></div>
+        <div class="title"><a href="https://arxiv.org/pdf/2501.10799" target="_blank" rel="noopener">Step-KTO: Optimizing Mathematical Reasoning through Stepwise Binary Feedback</a></div>
+        <div class="sub">arXiv 2025</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://arxiv.org/abs/2403.20180" target="_blank" rel="noopener">Measuring Taiwanese Mandarin Language Understanding</a></div>
-        <div class="pub-meta"><span class="venue">COLM 2024</span><span class="pub-note">Benchmark for Traditional Chinese LLM evaluation</span></div>
+        <div class="title"><a href="https://arxiv.org/abs/2403.20180" target="_blank" rel="noopener">Measuring Taiwanese Mandarin Language Understanding</a></div>
+        <div class="sub">COLM 2024</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with LLMs</a></div>
-        <div class="pub-meta"><span class="venue">NLP4ConvAI 2023</span></div>
+        <div class="title"><a href="https://aclanthology.org/2023.nlp4convai-1.5/" target="_blank" rel="noopener">LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with LLMs</a></div>
+        <div class="sub">NLP4ConvAI 2023</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2023.eacl-main.107/" target="_blank" rel="noopener">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
-        <div class="pub-meta"><span class="venue">EACL 2023</span></div>
+        <div class="title"><a href="https://aclanthology.org/2023.eacl-main.107/" target="_blank" rel="noopener">Selective In-Context Data Augmentation for Intent Detection using Pointwise V-Information</a></div>
+        <div class="sub">EACL 2023</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2022.sigdial-1.3/" target="_blank" rel="noopener">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
-        <div class="pub-meta"><span class="venue">SIGDIAL 2022</span></div>
+        <div class="title"><a href="https://aclanthology.org/2022.sigdial-1.3/" target="_blank" rel="noopener">Knowledge-Grounded Conversational Data Augmentation with Generative Conversational Networks</a></div>
+        <div class="sub">SIGDIAL 2022</div>
       </li>
       <li>
-        <div class="pub-title"><a href="https://aclanthology.org/2022.acl-long.425/" target="_blank" rel="noopener">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
-        <div class="pub-meta"><span class="venue">ACL 2022</span></div>
+        <div class="title"><a href="https://aclanthology.org/2022.acl-long.425/" target="_blank" rel="noopener">SalesBot: Transitioning from Chit-Chat to Task-Oriented Dialogues</a></div>
+        <div class="sub">ACL 2022</div>
       </li>
     </ul>
   </section>
 
   <section id="opensource">
     <h2>Open Source</h2>
-    <div class="proj">
-      <div class="card">
-        <h3><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">Traditional Chinese LLMs</a></h3>
-        <p>A previous project — open-weight large language models for Traditional Chinese, covering pretraining data, instruction tuning, and evaluation. Saw wide adoption across the research community and industry.</p>
-        <!-- TODO: fill in real numbers, e.g. downloads / citations / GitHub stars
-        <span class="metric">[ TODO: downloads / citations / GitHub stars ]</span>
-        -->
-      </div>
-      <div class="card">
-        <h3><a href="https://x.com/yentinglin56/status/1891371623837544859" target="_blank" rel="noopener">Mistral-Small-Reasoning</a></h3>
-        <p>Open-weight reasoning model distilled for efficient step-by-step problem solving.</p>
-      </div>
-    </div>
+    <ul class="list">
+      <li>
+        <div class="title"><a href="https://huggingface.co/collections/yentinglin/taiwan-llm-6523f5a2d6ca498dc3810f07" target="_blank" rel="noopener">Traditional Chinese LLMs</a></div>
+        <div class="sub">Open-weight models for Traditional Chinese, from pretraining data to evaluation.</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://x.com/yentinglin56/status/1891371623837544859" target="_blank" rel="noopener">Mistral-Small-Reasoning</a></div>
+        <div class="sub">Open-weight reasoning model distilled for efficient step-by-step problem solving.</div>
+      </li>
+    </ul>
   </section>
 
   </main>
 
   <footer>
-    <p class="fun">
-      Off the clock: serving two cats, one finished full marathon,
-      and a past life as a college trance DJ.
-    </p>
-    <p>© <span id="year">2026</span> Yenting Lin · Tokyo</p>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <p>Off the clock: two cats, one full marathon, and a past life as a college trance DJ.</p>
+    <p>© 2026 Yenting Lin · Tokyo</p>
   </footer>
 
 </div>
